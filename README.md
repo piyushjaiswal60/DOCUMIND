@@ -34,38 +34,32 @@ A professional-grade Retrieval-Augmented Generation (RAG) system that allows use
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
-- Python 3.10+
 - Node.js 18+
 - Docker & Docker Compose
 
-### 1. Backend Setup
+### 1. Configure Environment
+Create a `.env` file in the `backend/` directory and configure the following:
+- **Google Gemini API Key** (`GOOGLE_API_KEY`)
+- **PostgreSQL Credentials** (`POSTGRES_PASSWORD`)
+- **Qdrant Configuration**
+
+### 2. Start Backend
 ```bash
 cd backend
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure environment variables
-cp .env.example .env # Create .env and fill in your GOOGLE_API_KEY and DB credentials
+docker compose up --build
 ```
 
-### 2. Frontend Setup
+### 3. Start Frontend
 ```bash
-# Install dependencies
+# From the project root
 npm install
-
-# Start development server
 npm run dev
 ```
 
-### 3. Infrastructure
-```bash
-# Start PostgreSQL and Qdrant using Docker
-docker-compose up -d
-```
+### 🌐 Access Points
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:8000](http://localhost:8000)
+- **Swagger API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ## 📖 How It Works
 
