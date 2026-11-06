@@ -1,4 +1,4 @@
-# Production RAG Agent
+# DOCUMIND RAG Agent
 
 A professional-grade Retrieval-Augmented Generation (RAG) system that allows users to upload private documents, organize them into collections, and chat with them using an AI agent.
 
